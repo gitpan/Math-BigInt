@@ -18,7 +18,7 @@ package Math::BigInt;
 my $class = "Math::BigInt";
 use 5.006;
 
-$VERSION = '1.90';
+$VERSION = '1.91';
 
 @ISA = qw(Exporter);
 @EXPORT_OK = qw(objectify bgcd blcm); 
@@ -1374,11 +1374,11 @@ sub bexp
   else { $x = $u; }
   }
 
-sub blcm 
-  { 
+sub blcm
+  {
   # (BINT or num_str, BINT or num_str) return BINT
   # does not modify arguments, but returns new object
-  # Lowest Common Multiplicator
+  # Lowest Common Multiple
 
   my $y = shift; my ($x);
   if (ref($y))
@@ -1497,13 +1497,13 @@ sub is_even
 
 sub is_positive
   {
-  # return true when arg (BINT or num_str) is positive (>= 0)
+  # return true when arg (BINT or num_str) is positive (> 0)
   my ($self,$x) = ref($_[0]) ? (undef,$_[0]) : objectify(1,@_);
 
   return 1 if $x->{sign} eq '+inf';			# +inf is positive
- 
+
   # 0+ is neither positive nor negative
-  ($x->{sign} eq '+' && !$x->is_zero()) ? 1 : 0;	
+  ($x->{sign} eq '+' && !$x->is_zero()) ? 1 : 0;
   }
 
 sub is_negative
@@ -3135,8 +3135,8 @@ Math::BigInt - Arbitrary size integer/float math package
   $x->is_one('-');	# if $x is -1
   $x->is_odd();		# if $x is odd
   $x->is_even();	# if $x is even
-  $x->is_pos();		# if $x >= 0
-  $x->is_neg();		# if $x <  0
+  $x->is_pos();		# if $x > 0
+  $x->is_neg();		# if $x < 0
   $x->is_inf($sign);	# if $x is +inf, or -inf (sign is default '+')
   $x->is_int();		# if $x is an integer (not a float)
 
@@ -3211,14 +3211,14 @@ Math::BigInt - Arbitrary size integer/float math package
 
   $x->bfloor();		   # return integer less or equal than $x
   $x->bceil();		   # return integer greater or equal than $x
-  
+
   # The following do not modify their arguments:
 
   # greatest common divisor (no OO style)
   my $gcd = Math::BigInt::bgcd(@values);
-  # lowest common multiplicator (no OO style)
-  my $lcm = Math::BigInt::blcm(@values);	
- 
+  # lowest common multiple (no OO style)
+  my $lcm = Math::BigInt::blcm(@values);
+
   $x->length();		   # return number of digits in number
   ($xl,$f) = $x->length(); # length of number and length of fraction part,
 			   # latter is always 0 digits long for BigInts
@@ -3399,8 +3399,8 @@ Value must be greater than zero. Pass an undef value to disable it:
 	$x->accuracy(undef);
 	Math::BigInt->accuracy(undef);
 
-Returns the current accuracy. For C<$x->accuracy()> it will return either the
-local accuracy, or if not defined, the global. This means the return value
+Returns the current accuracy. For C<< $x->accuracy() >> it will return either
+the local accuracy, or if not defined, the global. This means the return value
 represents the accuracy that will be in effect for $x:
 
 	$y = Math::BigInt->new(1234567);	# unrounded
@@ -3449,8 +3449,8 @@ Pass an undef value to disable it:
 	$x->precision(undef);
 	Math::BigInt->precision(undef);
 
-Returns the current precision. For C<$x->precision()> it will return either the
-local precision of $x, or if not defined, the global. This means the return
+Returns the current precision. For C<< $x->precision() >> it will return either
+the local precision of $x, or if not defined, the global. This means the return
 value represents the prevision that will be in effect for $x:
 
 	$y = Math::BigInt->new(1234567);	# unrounded
@@ -3508,7 +3508,7 @@ See L<Input> for more info on accepted input formats.
 
 =head2 from_bin()
 
-	$x = Math::BigInt->from_oct("0x10011");	# input is binary
+	$x = Math::BigInt->from_bin("0x10011");	# input is binary
 
 =head2 bnan()
 
@@ -3604,7 +3604,7 @@ Returns -1, 0, 1 or undef.
 
 	$x->bacmp($y);
 
-Compares $x with $y while ignoring their. Returns -1, 0, 1 or undef.
+Compares $x with $y while ignoring their sign. Returns -1, 0, 1 or undef.
 
 =head2 sign()
 
@@ -3911,8 +3911,8 @@ does change $x in BigFloat.
 
 =head2 blcm()
 
-	blcm(@values);		# lowest common multiplicator (no OO style)
- 
+	blcm(@values);		# lowest common multiple (no OO style)
+
 head2 length()
 
 	$x->length();
@@ -4653,8 +4653,8 @@ directly.
 
 =item *
 
-The private object hash keys like C<$x->{sign}> may not be changed, but
-additional keys can be added, like C<$x->{_custom}>.
+The private object hash keys like C<< $x->{sign} >> may not be changed, but
+additional keys can be added, like C<< $x->{_custom} >>.
 
 =item *
 
