@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.64.
+signed via the Module::Signature module, version 0.66.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -16,7 +16,7 @@ Hash: SHA1
 
 SHA1 f6ef98e8f3f6a4f670d569f279ef5a3c05c16d0c BENCHMARK
 SHA1 2c6c3022349b6328c19aef613607c070900f06ec BUGS
-SHA1 d73a577b8ba11acebec4a8d0f8a8ca7e9c73ab08 CHANGES
+SHA1 ed6b0101e3d18c6234103340b6234ccb6d713932 CHANGES
 SHA1 f27c8bd98e754f96c9825fa6ce9f1244c93bdbe6 CREDITS
 SHA1 bc2db74538d3acd53f71b5512a144fe18c253ecd GOALS
 SHA1 c526ad20dce6fa315a49dfc41b4d27c40f2b6576 HISTORY
@@ -24,8 +24,8 @@ SHA1 c42565ad26cdf91502bacf19a4f7080e63c51fe2 INSTALL
 SHA1 d6a6c30ee6d9ba6b9afab8bbf6a25e1b23c744e0 LICENSE
 SHA1 73e5883c87abf93144e1c5e6b043f54f505026e2 MANIFEST
 SHA1 28e0843acbc175242b0744c7a2a5b2e9397489ee MANIFEST.SKIP
-SHA1 df362118669edf1b0c19775233d81ad1c1676815 META.yml
-SHA1 c0f2390a58fe4e3a4037e2e5af795cedcbc179b0 Makefile.PL
+SHA1 5959e13fe8e155dc952081027eecce4c2263079d META.yml
+SHA1 488f37baeb0046cff12abaedf9e91bbcdaa0df8f Makefile.PL
 SHA1 2ec9bfda86bb2073e9423e6a86bb6956c06ebb2f NEW
 SHA1 481f5827752d2100914db1eaeb60bf0bbd13529e README
 SHA1 6ae43bba2ee4f469ae9f43a916955caff273d41b TODO
@@ -33,16 +33,16 @@ SHA1 c2bbe82659480de8710b9e64a62d47b64dddd2d2 examples/1000.txt
 SHA1 b88700764a8b78c904ed38e50db0286b76228132 examples/bigprimes.pl
 SHA1 b57b118469a1a16e54d61206c5bd9077dbb2231a examples/hailstone.pl
 SHA1 8ca42793d8769ec8d0928f11c30f38d96dd54efb examples/prime.pl
-SHA1 d8f6d2df4e75cb9e6e77a8377457f0ececd00e31 inc/Module/Install.pm
-SHA1 03590cde5c3de0d0d8a84d2b96917ed1a2cf9a30 inc/Module/Install/Base.pm
-SHA1 8ef3c70e905be7d1007b446f21d4eb3ff6ae24cb inc/Module/Install/Can.pm
-SHA1 79054604a1cd4e99443b05cbb62832568a204a33 inc/Module/Install/Fetch.pm
-SHA1 dfa433f2f41d990946f1b3d68a29299539f2dea6 inc/Module/Install/Makefile.pm
-SHA1 72cab336b6be5716aae0a1cb6d9add6c98a7a1f5 inc/Module/Install/Metadata.pm
-SHA1 35a62725a7eade0fa617ef2ba4cf2f4d4a69a3fe inc/Module/Install/Win32.pm
-SHA1 19dcc6d1e9f02c56d3f6d184642f4cd68aa371e6 inc/Module/Install/WriteAll.pm
-SHA1 b28d57f0a64ac09a598108a9289f6493b2279a7a lib/Math/BigFloat.pm
-SHA1 e3e81fff04c6e5f77c88bcf764cc0b13cd474513 lib/Math/BigInt.pm
+SHA1 7305dbe2904416e28decb05396988a5d51d578be inc/Module/Install.pm
+SHA1 129960509127732258570c122042bc48615222e1 inc/Module/Install/Base.pm
+SHA1 cf3356ed9a5bd2f732527ef9e7bc5ef4458c8a93 inc/Module/Install/Can.pm
+SHA1 bf0a3e1977effc2832d7a813a76dce3f31b437b6 inc/Module/Install/Fetch.pm
+SHA1 b721c93ca5bc9a6aa863b49af15f1b1de6125935 inc/Module/Install/Makefile.pm
+SHA1 026cc0551a0ad399d195e395b46bdf842e115192 inc/Module/Install/Metadata.pm
+SHA1 5457015ea5a50e93465bf2dafa29feebd547f85b inc/Module/Install/Win32.pm
+SHA1 051e7fa8063908befa3440508d0584a2497b97db inc/Module/Install/WriteAll.pm
+SHA1 92cd010096146310dd4eeca2a3deb8092d5302fa lib/Math/BigFloat.pm
+SHA1 0896ca9a42357c2726453c9fb35a1faeeedb7ae0 lib/Math/BigInt.pm
 SHA1 623ce6cdc5a982baabac4efae4486479d176b32c lib/Math/BigInt/Calc.pm
 SHA1 6bc5dcd506fdf1663a87e3a32e7f688b28233b4a lib/Math/BigInt/CalcEmu.pm
 SHA1 63d3ac167c2d98484f521ad9cbddbf306d33d8eb t/Math/BigFloat/Subclass.pm
@@ -106,7 +106,7 @@ SHA1 6965698ab77cb8d5733c2cf597742bf633225e77 t/with_sub.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAkyBEzIACgkQdC8qQo5jWl5qlwCeIvBGMXdJIiai4O3YiWvY5KQZ
-o4UAn33WOhe5bJhVJjVhLCKDXHgOIp7r
-=sPYB
+iEYEARECAAYFAkyJzWYACgkQdC8qQo5jWl6BJQCeJd4uPR8xZvkwgAAnDvwuiQTj
+b98Ani3EVRflNtcafG/4NVgFveJQMtOn
+=5Fqq
 -----END PGP SIGNATURE-----
